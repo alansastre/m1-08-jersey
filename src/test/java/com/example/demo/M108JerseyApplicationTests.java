@@ -63,15 +63,15 @@ class M108JerseyApplicationTests {
 	
 	@Test
 	void testFindAll() throws Exception {
-		ResponseEntity<ArrayList> entity = 
-				this.testRestTemplate.getForEntity("/api/smartphone", ArrayList.class);
+		ResponseEntity<SmartPhone[]> entity = 
+				this.testRestTemplate.getForEntity("/api/smartphone", SmartPhone[].class);
 		
 		// comprobaciones
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 		
 		System.out.println(entity.getBody());
 		
-		ArrayList<SmartPhone> phones = entity.getBody();
+		List<SmartPhone> phones = Arrays.asList(entity.getBody());
 		for (SmartPhone smartPhone : phones) {
 			System.out.println(smartPhone);
 		}
