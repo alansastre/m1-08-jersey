@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "d04ae8c4-19d0-4c6a-9407-135190a76f1d",
+		"name": "Proyecto1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/hello/metodo2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hello/metodo2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hello",
+						"metodo2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/hello/metodo3/texto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hello/metodo3/texto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hello",
+						"metodo3",
+						"texto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartdevice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartdevice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartdevice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/phone Factory-Facade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartdevice/phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartdevice",
+						"phone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/watch Factory-Facade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartdevice/watch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartdevice",
+						"watch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartphone findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartphone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartphone/1 findOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartphone/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartphone",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartphone create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"name\": \"Another smartphone otra vez\",\r\n    \"ram\": {\r\n        \"id\": 4,\r\n        \"type\": \"DDR6\",\r\n        \"gigabytes\": 32\r\n    },\r\n    \"battery\": {\r\n        \"id\": 3,\r\n        \"capacity\": 9500.0\r\n    },\r\n    \"cpu\": {\r\n        \"id\": 4,\r\n        \"on\": false,\r\n        \"cores\": 16\r\n    },\r\n    \"wifi\": true,\r\n    \"camera\": {\r\n        \"id\": 3,\r\n        \"model\": \"front camera\",\r\n        \"megapixels\": 58.5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/smartphone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartphone update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"One plus 9 editado otra vez\",\r\n    \"ram\": {\r\n        \"id\": 1,\r\n        \"type\": \"DDR4\",\r\n        \"gigabytes\": 8\r\n    },\r\n    \"battery\": {\r\n        \"id\": 1,\r\n        \"capacity\": 4500.0\r\n    },\r\n    \"cpu\": {\r\n        \"id\": 1,\r\n        \"on\": false,\r\n        \"cores\": 4\r\n    },\r\n    \"wifi\": true,\r\n    \"camera\": {\r\n        \"id\": 1,\r\n        \"model\": \"front camera\",\r\n        \"megapixels\": 12.5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/smartphone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartphone/1 deleteOne",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartphone/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartphone",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/smartphone deleteAll",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/smartphone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"smartphone"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
