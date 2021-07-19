@@ -2,7 +2,9 @@ package com.example.demo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -41,7 +43,7 @@ class M108JerseyApplicationTests {
 
 	@Test
 	@DisplayName("Pruebas GET Hello Controller")
-	void testGET() {
+	void testGetHelloWorld() {
 
 		// ejecutar el metodo de controlador a testear
 		ResponseEntity<String> entity = this.testRestTemplate.getForEntity("/api/hello", String.class);
@@ -57,6 +59,39 @@ class M108JerseyApplicationTests {
 		assertEquals("Hola desde método 1", entity.getBody());
 
 	}
+	
+	
+	@Test
+	void testFindAll() throws Exception {
+		ResponseEntity<ArrayList> entity = 
+				this.testRestTemplate.getForEntity("/api/smartphone", ArrayList.class);
+		
+		// comprobaciones
+		assertEquals(HttpStatus.OK, entity.getStatusCode());
+		
+		System.out.println(entity.getBody());
+		
+		ArrayList<SmartPhone> phones = entity.getBody();
+		for (SmartPhone smartPhone : phones) {
+			System.out.println(smartPhone);
+		}
+
+	}
+	@Test
+	void testFindOne() {
+		// preparacion
+		
+		// ejecucion
+		ResponseEntity<SmartPhone> response = 
+				this.testRestTemplate.getForEntity("/api/smartphone/1", SmartPhone.class);
+		
+		// comprobaciones
+		assertEquals(HttpStatus.OK, response.getStatusCode());
+
+		SmartPhone phone = response.getBody();
+		assertEquals(1L , phone.getId());
+	}
+	
 
 	@Test
 	void testPost() {
